@@ -882,8 +882,6 @@ config_setting() ->
                        end
     end.
 
-%% We don't want this in fhc since it references rabbit stuff. And we can't put
-%% this in the bootstep directly.
 start_fhc() ->
     rabbit_sup:start_restartable_child(
       file_handle_cache,
